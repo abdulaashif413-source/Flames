@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FLAMES | Find Your Connection</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <main class="app">
+    <section class="intro">
+      <div class="brand"><span>♡ FLAMES ♡</div>
+      <div class="sub-brand">Find what flames says</div>
+    </section>
+
+    <section class="form-panel">
+      <form id="flames-form">
+        <div class="fields">
+          <label for="your-name">Your name
+            <input id="your-name" type="text" placeholder="e.g. Alex" autocomplete="name">
+          </label>
+          <label for="their-name">His / Her name
+            <input id="their-name" type="text" placeholder="e.g. Jamie" autocomplete="off">
+          </label>
+        </div>
+        <button type="submit">Reveal the spark</button>
+        <p class="hint">Just for fun · Keep an open heart</p>
+      </form>
+      <div class="result" id="result" aria-live="polite">
+        <p class="result-label">Your FLAMES result</p>
+        <h2 id="result-title"></h2>
+        <p id="result-message"></p>
+      </div>
+    </section>
+  </main>
+  <div class="play-again-modal" id="play-again-modal" role="dialog" aria-modal="true"
+    aria-labelledby="play-again-title">
+    <div class="modal-card">
+      <span class="modal-heart">♡</span>
+      <p class="modal-label">A new spark?</p>
+      <h2 id="play-again-title">Play again with a new pair?</h2>
+      <p>Try two new names and discover another playful connection.</p>
+      <button type="button" id="play-again-button">Play again</button>
+      <button type="button" class="modal-close" id="modal-close">Maybe later</button>
+    </div>
+  </div>
+  <div class="future-toast" id="future-toast" role="status" aria-live="polite">
+    <p class="future-toast-title">🔮 Wait... we found something else</p>
+    <p>Want to see what your relationship looks like 5 years from now?</p>
+    <button type="button" id="reveal-future-button">Reveal Future</button>
+  </div>
+  <div class="future-modal" id="future-modal" role="dialog" aria-modal="true" aria-labelledby="future-title">
+    <div class="future-card">
+      <button type="button" class="future-close" id="future-close" aria-label="Close future prediction">×</button>
+      <span class="future-symbol">🔮</span>
+      <p class="future-label">5 YEARS LATER...</p>
+      <h2 id="future-title"></h2>
+      <p class="future-prediction" id="future-prediction"></p>
+      <p class="future-disclaimer">Just for fun — not a real prediction.</p>
+      <button type="button" id="another-future-button">🔄 Another Future</button>
+    </div>
+  </div>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
